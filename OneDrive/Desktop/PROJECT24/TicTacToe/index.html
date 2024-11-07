@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome Icons -->
+</head>
+<body>
+
+<!-- Initial Screen -->
+<div id="startScreen" class="modal">
+    <div class="modal-content">
+      <h2 class="welcome-title">Welcome to Tic Tac Toe</h2>
+      <!-- Added the poster image below the title -->
+      <img src="poster_image.png" alt="Game Poster" class="poster-image">
+      <br></br>
+      <button id="startGameBtn" class="start-btn">
+        Play Now <i class="fas fa-play"></i>
+      </button>
+    </div>
+</div>
+
+<!-- Game Screen -->
+<div id="gameScreen" class="hidden">
+    <h2 id="game_header">Tic Tac Toe</h2>
+    <div id="status">Player <span id="currentPlayer">X</span>'s Turn</div>
+    <div class="board" id="board">
+      <!-- 9 game cells -->
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+    <div class="controls">
+      <button id="restartBtn">Restart <i class="fas fa-redo"></i></button>
+    </div>
+</div>
+
+<!-- Sound Effects -->
+<audio id="placeSound" src="sounds/place.mp3"></audio>
+<audio id="gameOverSound" src="sounds/gameOver.mp3"></audio>
+<audio id="clickSound" src="sounds/click.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
